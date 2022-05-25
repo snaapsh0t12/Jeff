@@ -2,6 +2,8 @@
  A Virtual Assistant
 
  We love Jeff and you should too
+ 
+ # I'M GOING TO WORK ON JEFF OVER THE SUMMER SO DON'T EXPECT ANYTHING
 
  ## But how does he work?
  lmao I have no clue
