@@ -12,5 +12,4 @@
  ## How do I Compile Jeff?
  you don't, plain and simple. he's mine.
 
-
  You need to have libdeepspeech.so somewhere where it's needed
