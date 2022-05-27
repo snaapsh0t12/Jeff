@@ -1,11 +1,21 @@
 PREFIX ?= /usr
 MANDIR ?= $(PREFIX)/share/man
-DOCDIR ?= $(PREFIX)/share/doc/fff
+DOCDIR ?= $(PREFIX)/share/doc/Jeff
 
 all:
-	@echo Run \'make install\' to install Jeff.
+	@echo Run \'make install\' to install Jeff \n or to reinstall Jeff, Run \'make reinstall'
 
 install:
+	@cargo build
+	@mkdir -p $(DESTDIR)$(PREFIX)/bin
+	@mkdir -p $(DESTDIR)$(DOCDIR)
+	@cp -p /target/debug/jeff $(DESTDIR)$(PREFIX)/bin/jeff
+	@cp -p README.md $(DESTDIR)$(DOCDIR)
+	@chmod 755 $(DESTDIR)$(PREFIX)/bin/jeff
+
+reinstall:
+	@rm -rf $(DESTDIR)$(PREFIX)/bin/jeff
+	@rm -rf $(DESTDIR)$(DOCDIR)
 	@cargo build
 	@mkdir -p $(DESTDIR)$(PREFIX)/bin
 	@mkdir -p $(DESTDIR)$(DOCDIR)
