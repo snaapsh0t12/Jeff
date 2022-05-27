@@ -4,6 +4,7 @@
  We love Jeff and you should too
  
  # I'M GOING TO WORK ON JEFF OVER THE SUMMER SO DON'T EXPECT ANYTHING SOON
+ # ALSO the README.md will actually have time put into it later on
 
  ## But how does he work?
  lmao I have no clue
