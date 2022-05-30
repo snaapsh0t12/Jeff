@@ -14,14 +14,15 @@ fn main() -> Result<(), anyhow::Error> {
             None => None,
         },
     )?;
-    let i_said = ds_transcriber::transcribe(ds_transcriber::StreamSettings::default(), &mut model)?;
+    
+    let i_said = ds_transcriber::transcribe(ds_transcriber::StreamSettings::new(20, true, 1000), &mut model)?;
     println!("I said: {}", i_said);
     Ok(())
 }
 
 fn initialise_app() -> (impl AsRef<Path>, Option<impl AsRef<Path>>) {
-    let model_path = "/Users/aidenlee/DeepSpeechClientNew/deepspeech-0.9.3-models.pbmm";
-    let scorer_path = "/Users/aidenlee/DeepSpeechClientNew/deepspeech-0.9.3-models.scorer";
+    let model_path = "/Users/aidenlee/DeepSpeechClient/deepspeech-0.9.0-models.pbmm";
+    let scorer_path = "/Users/aidenlee/DeepSpeechClient/deepspeech-0.9.0-models.scorer";
     let native_client = "/Users/aidenlee/DeepSpeechClient/";
     set_var("LD_LIBRARY_PATH", native_client);
     set_var("LIBRARY_PATH", native_client);
